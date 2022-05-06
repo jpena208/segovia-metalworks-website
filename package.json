@@ -1,0 +1,26 @@
+{
+  "name": "segovia-metalworks-website",
+  "version": "1.0.0",
+  "description": "Website for the Segovia Metal Works",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jpena208/segovia-metalworks-website.git"
+  },
+  "author": "Jose Peña",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/jpena208/segovia-metalworks-website/issues"
+  },
+  "homepage": "https://github.com/jpena208/segovia-metalworks-website#readme",
+  "dependencies": {
+    "autoprefixer": "^10.4.7",
+    "bootstrap": "^5.1.3",
+    "express": "^4.18.1",
+    "nodemon": "^2.0.16",
+    "sass": "^1.51.0"
+  }
+}
