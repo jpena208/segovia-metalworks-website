@@ -1,3 +1,5 @@
+/* Globals
+-------------------------------------------------- */
 *,
 *::before,
 *::after {
@@ -27,19 +29,15 @@ a {
 }
 
 .bg-dark-transparent {
-  background-color: rgba(27, 24, 24, 0.9);
+  background-color: rgba(26, 27, 29, 0.95);
 }
 
-.karla {
+.font-karla {
   font-family: "Karla", sans-serif;
 }
 
 /* Navbar
 -------------------------------------------------- */
-nav {
-  font-family: "karla", sans-serif;
-}
-
 nav a {
   text-decoration: none;
 }
@@ -61,8 +59,8 @@ nav a {
   width: 300px;
 }
 
-#navbar-brand {
-  margin-right: 1rem;
+#logo {
+  margin-right: calc(5.7rem + 1.5vw);
 }
 
 /* Header
@@ -97,6 +95,13 @@ header {
 
 /* Contact
 -------------------------------------------------- */
+#contact {
+  background-image: url("../public/images/metal-bg.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: bottom;
+}
+
 #contact-button {
   display: inline-block;
   border-radius: 17px;
@@ -113,7 +118,7 @@ header {
 
 #contact-button:hover {
   background-position: left bottom;
-  color: var(--bs-dark) !important;
+  color: var(--bs-white) !important;
 }
 
 #contact-box {
@@ -124,12 +129,18 @@ header {
 -------------------------------------------------- */
 /* Up to Extra Small */
 @media (max-width: 370px) {
+  /* Navbar */
   #navbar-brand,
   .navbar-toggler-icon,
   .icons {
     font-size: calc(0.5rem + 1.5vw);
   }
 
+  #logo {
+    margin-right: calc(1rem + 2.5vw);
+  }
+
+  /* Contact */
   #contact div {
     width: 100%;
   }
@@ -140,15 +151,21 @@ header {
 
 /* Extra Small to Small */
 @media (min-width: 371px) and (max-width: 576px) {
+  /* Navbar */
   #navbar-brand {
     font-size: calc(1rem + 1.5vw);
+  }
+
+  #logo {
+    margin-right: calc(2rem + 1.5vw);
   }
 }
 
 /* Up to small */
 @media (max-width: 576px) {
-  #contact-box {
-    width: 90%;
+  /* Globals */
+  .btn {
+    font-size: 0.75rem;
   }
 
   p {
@@ -162,17 +179,34 @@ header {
   .fs-4 {
     font-size: calc(0.8rem + 1vw) !important;
   }
+
+  /* Navbar */
+
+  /* Contact */
+  #contact-box {
+    width: 90%;
+  }
 }
 
 /* Small and up */
 @media (min-width: 576px) {
+  /* Header */
   header {
     height: 25rem;
   }
 }
 
+/* Small to medium */
+@media (min-width: 577px) and (max-width: 767px) {
+  /* Navbar */
+  #logo {
+    margin-right: calc(2rem + 1.5vw);
+  }
+}
+
 /* Up to medium */
 @media (max-width: 767px) {
+  /* Navbar */
   .navbar-dark .navbar-nav .nav-link {
     color: #181720;
   }
@@ -192,6 +226,7 @@ header {
     margin-left: 1rem;
   }
 
+  /* Footer */
   .footer-center {
     text-align: center;
   }
@@ -199,6 +234,7 @@ header {
 
 /* Medium and up */
 @media (min-width: 768px) {
+  /* Navbar */
   .offcanvas-start {
     width: max-content;
   }
@@ -206,6 +242,7 @@ header {
 
 /* Large and up */
 @media (min-width: 992px) {
+  /* Header */
   header {
     height: 30rem;
     object-position: bottom;
@@ -215,6 +252,7 @@ header {
 
 /* Extra large and up */
 @media (min-width: 1600px) {
+  /* Header */
   header {
     height: 37rem;
   }

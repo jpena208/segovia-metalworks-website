@@ -5,20 +5,15 @@
 
 // 2. Include any default variable overrides here
 // Theme colors
-$primary: #bb8f64;
-$secondary: #c5406b;
-$tertiary: #40c59a;
-$success: #1f976c;
-$info: #e19941;
-$warning: #cecd21;
-$danger: #d74310;
-$light: rgba(245, 241, 205, 0.63);
-$dark: #181720;
-$white: #ffffff;
-
-// Navbar links
-// $navbar-dark-hover-color: rgba($white, 0.75);
-// $navbar-dark-active-color: $white;
+$primary: #133d9a;
+$secondary: #4f5e7a;
+$success: #3b8d66;
+$info: #1a1a1b;
+$warning: #b87d2e;
+$danger: #f44336;
+$light: #65afdb;
+$dark: #1a1b1d;
+$white: #f8f2f6;
 
 // 3. Include remainder of required Bootstrap stylesheets
 @import "../node_modules/bootstrap/scss/variables";
@@ -26,23 +21,6 @@ $white: #ffffff;
 @import "../node_modules/bootstrap/scss/root";
 
 //    Include function stuff like maps here
-// Merge the maps
-$theme-colors: map-merge(
-  $theme-colors,
-  (
-    "tertiary": $tertiary,
-    "white": $white,
-  )
-);
-$theme-colors-rgb: map-loop($theme-colors, to-rgb, "$value");
-$utilities-colors: map-merge($utilities-colors, $theme-colors-rgb);
-$utilities-text-colors: map-loop(
-  $utilities-colors,
-  rgba-css-var,
-  "$key",
-  "text"
-);
-$utilities-bg-colors: map-loop($utilities-colors, rgba-css-var, "$key", "bg");
 
 // 4. Include any optional Bootstrap components as you like
 @import "../node_modules/bootstrap/scss/utilities";
