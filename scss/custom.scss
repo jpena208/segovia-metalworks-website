@@ -36,3 +36,8 @@ $white: #f8f2f6;
 @import "../node_modules/bootstrap/scss/bootstrap";
 
 // 5. Add additional custom code here
+.nav-link.active {
+  .nav-indicator {
+    display: inline;
+  }
+}

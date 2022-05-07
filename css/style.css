@@ -47,6 +47,11 @@ nav a {
   color: #181720;
 }
 
+.nav-indicator {
+  color: var(--bs-light);
+  display: none;
+}
+
 .navbar-collapse {
   flex-grow: 0;
 }
