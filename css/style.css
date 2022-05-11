@@ -83,16 +83,143 @@ header {
 
 /* Featured Products
 -------------------------------------------------- */
+/* Editing images */
 .main-row .img-fluid {
   width: 100%;
   object-fit: fill;
 }
 
-.position-relative a {
-  color: #181720;
-  padding: 1rem;
-  border-radius: 6%;
-  width: 50%;
+.medium-picture {
+  width: 100%;
+  height: 282px;
+  object-fit: cover;
+}
+
+.small-picture {
+  width: 282px;
+  height: 282px;
+  object-fit: cover;
+}
+
+/* Editing image captions */
+.main-row a {
+  font-family: "karla", sans-serif;
+  font-size: 80%;
+}
+
+/* General styling for figures and figcaptions on mobile*/
+figure {
+  margin: 0;
+  position: relative;
+  overflow: hidden;
+}
+
+figure img {
+  transition: transform 0.4s;
+}
+
+figure:hover img {
+  transform: translateY(-2rem);
+}
+
+figcaption {
+  height: 30%;
+  width: 100%;
+  position: absolute;
+  top: auto;
+  bottom: 0;
+  opacity: 0;
+  transform: translateY(100%);
+  transition: transform 0.4s, opacity 0.1s 0.3s;
+  padding: 0.75rem;
+  font-family: "karla", sans-serif;
+  background-color: var(--bs-dark);
+  color: var(--bs-white);
+}
+
+figure:hover figcaption {
+  opacity: 1;
+  transform: translateY(0);
+  transition: transform 0.4s, opacity 0.1s;
+}
+
+figcaption .container {
+  padding: 0;
+}
+
+figcaption h5,
+figcaption h6 {
+  margin: 0;
+  padding: 0;
+  color: var(--bs-white);
+  font-size: 80%;
+}
+
+figcaption span {
+  font-size: 60%;
+}
+
+figcaption p {
+  margin: 0;
+  margin-left: auto;
+  font-size: 80%;
+}
+
+figcaption a {
+  margin: 0;
+  margin-left: auto;
+  border-radius: 2px;
+  display: inline-block;
+}
+
+#large-title {
+  font-size: 60%;
+}
+
+/* Media queries for image sizes on different screen widths */
+/* Up to extra large */
+@media (min-width: 768px) and (max-width: 992px) {
+  .medium-picture {
+    width: 100%;
+    height: 132px;
+    object-fit: cover;
+  }
+
+  .small-picture {
+    width: 132px;
+    height: 132px;
+    object-fit: cover;
+  }
+}
+
+/* Up to extra large */
+@media (min-width: 993px) and (max-width: 1200px) {
+  .medium-picture {
+    width: 100%;
+    height: 204px;
+    object-fit: cover;
+  }
+
+  .small-picture {
+    width: 204px;
+    height: 204px;
+    object-fit: cover;
+  }
+}
+
+/* Up to extra large */
+@media (min-width: 1201px) and (max-width: 1400px) {
+  .medium-picture {
+    width: 100%;
+    height: 240px;
+    object-fit: cover;
+  }
+
+  .small-picture {
+    width: 240px;
+    height: 240px;
+    object-fit: cover;
+  }
 }
 
 /* Information
@@ -164,6 +291,11 @@ header {
   #logo {
     margin-right: calc(2rem + 1.5vw);
   }
+
+  /* Featured Products */
+  .large-caption {
+    height: 25%;
+  }
 }
 
 /* Up to small */
@@ -207,6 +339,10 @@ header {
   #logo {
     margin-right: calc(2rem + 1.5vw);
   }
+
+  .large-caption {
+    height: 20%;
+  }
 }
 
 /* Up to medium */
@@ -245,6 +381,37 @@ header {
   }
 }
 
+@media (min-width: 768px) and (max-width: 992px) {
+  /* Featured Products */
+  /* Figcaption for large photos */
+  .large-caption {
+    height: 25%;
+  }
+
+  .large-title {
+    font-size: 35% !important;
+  }
+
+  /* Figcaption for small photos */
+  .small-caption {
+    height: 30%;
+    padding: 0.3rem;
+  }
+  .small-caption h6 {
+    font-size: 50%;
+  }
+  .small-caption span,
+  p {
+    font-size: 45% !important;
+  }
+  .small-caption a {
+    padding: 2.5px 5px !important;
+    font-size: xx-small;
+    bottom: 5px;
+    right: 5px;
+  }
+}
+
 /* Large and up */
 @media (min-width: 992px) {
   /* Header */
@@ -253,9 +420,79 @@ header {
     object-position: bottom;
     object-fit: cover;
   }
+
+  .large-title {
+    font-size: 60% !important;
+  }
 }
 
-/* Extra large and up */
+@media (min-width: 992px) and (max-width: 1200px) {
+  /* Featured Products */
+  /* Figcaption for large photos */
+  .large-caption {
+    height: 20%;
+  }
+  .large-caption h5 {
+    font-size: 100%;
+  }
+  .large-caption span {
+    font-size: 80%;
+  }
+
+  /* Figcaption for small photos */
+  .small-caption {
+    height: 30%;
+    padding: 0.5rem;
+  }
+  .small-caption h6 {
+    font-size: 75%;
+  }
+  .small-caption span,
+  p {
+    font-size: 60% !important;
+  }
+  .small-caption a {
+    padding: 2.5px 5px !important;
+    font-size: xx-small;
+    bottom: 10px;
+    right: 10px;
+  }
+}
+
+@media (min-width: 1200px) {
+  /* Featured Products */
+  /* Figcaption for large photos */
+  .large-caption {
+    height: 15%;
+  }
+  .large-caption h5 {
+    font-size: 100%;
+  }
+  .large-caption span {
+    font-size: 90%;
+  }
+
+  /* Figcaption for small photos */
+  .small-caption {
+    height: 30%;
+    padding: 0.5rem;
+  }
+  .small-caption h6 {
+    font-size: 100%;
+  }
+  .small-caption span,
+  p {
+    font-size: 75% !important;
+  }
+  .small-caption a {
+    padding: 4px 16px !important;
+    font-size: small;
+    bottom: 10px;
+    right: 10px;
+  }
+}
+
+/* Extra extra large and up */
 @media (min-width: 1600px) {
   /* Header */
   header {
