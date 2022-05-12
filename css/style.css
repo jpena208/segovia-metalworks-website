@@ -234,10 +234,10 @@ figcaption a {
   background-position: bottom;
 }
 
-#contact-button {
+.cool-button {
   display: inline-block;
   border-radius: 17px;
-  margin: 0 auto;
+  /* margin: 0 auto; */
   background: linear-gradient(
     to left,
     rgba(255, 255, 255, 0) 50%,
@@ -248,7 +248,7 @@ figcaption a {
   transition: all 0.4s ease;
 }
 
-#contact-button:hover {
+.cool-button:hover {
   background-position: left bottom;
   color: var(--bs-white) !important;
 }
@@ -401,7 +401,7 @@ figcaption a {
     font-size: 50%;
   }
   .small-caption span,
-  p {
+  .small-captioon p {
     font-size: 45% !important;
   }
   .small-caption a {
@@ -448,7 +448,7 @@ figcaption a {
     font-size: 75%;
   }
   .small-caption span,
-  p {
+  .small-caption p {
     font-size: 60% !important;
   }
   .small-caption a {
@@ -481,7 +481,7 @@ figcaption a {
     font-size: 100%;
   }
   .small-caption span,
-  p {
+  .small-caption p {
     font-size: 75% !important;
   }
   .small-caption a {

@@ -1,0 +1,28 @@
+/* Shop Grid
+-------------------------------------------------- */
+.card-title {
+  margin-bottom: 0;
+  font-weight: 700;
+}
+
+.card-text {
+  font-size: calc(1rem + 0.5vw);
+}
+
+.col {
+  margin-bottom: 15px;
+}
+.card {
+  height: 100%;
+}
+/* Media Queries
+-------------------------------------------------- */
+@media (min-width: 768px) and (max-width: 992px) {
+  .cool-button {
+    padding-left: 1.7rem !important;
+    padding-right: 1.7rem !important;
+  }
+  .btn {
+    font-size: 0.75rem;
+  }
+}
