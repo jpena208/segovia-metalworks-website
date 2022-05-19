@@ -222,8 +222,22 @@ figcaption a {
   }
 }
 
+/* Reviews
+-------------------------------------------------- */
+#reviews-shop-name img {
+  width: 50px;
+  height: 50px;
+}
+
+#review-carousel {
+  height: 700px;
+}
+
 /* Information
 -------------------------------------------------- */
+.list li {
+  list-style: circle;
+}
 
 /* Contact
 -------------------------------------------------- */
@@ -272,6 +286,16 @@ figcaption a {
     margin-right: calc(1rem + 2.5vw);
   }
 
+  /* Reviews */
+  #reviews-shop-name,
+  #reviews-rating {
+    font-size: 80%;
+  }
+  #reviews-shop-name img {
+    width: 25px;
+    height: 25px;
+  }
+
   /* Contact */
   #contact div {
     width: 100%;
@@ -309,7 +333,8 @@ figcaption a {
     font-size: calc(0.5rem + 1vw);
   }
 
-  p.lead {
+  p.lead,
+  span.lead {
     font-size: calc(0.8rem + 1vw);
   }
 
@@ -317,7 +342,10 @@ figcaption a {
     font-size: calc(0.8rem + 1vw) !important;
   }
 
-  /* Navbar */
+  /* Reviews */
+  #review-carousel {
+    height: 140vw;
+  }
 
   /* Contact */
   #contact-box {
