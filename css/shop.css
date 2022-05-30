@@ -19,6 +19,12 @@
 .card-img-overlay {
   bottom: auto;
 }
+
+/* Shop Logo */
+#shop-logo {
+  width: 200px;
+}
+
 /* Media Queries
 -------------------------------------------------- */
 @media (min-width: 768px) and (max-width: 992px) {

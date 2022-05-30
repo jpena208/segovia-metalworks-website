@@ -25,556 +25,727 @@
     <link href="css/custom.min.css" rel="stylesheet" />
 
     <!-- CSS -->
-    <link href="css/style.css" rel="stylesheet" />
+    <link href="css/lightbox.min.css" rel="stylesheet" type="text/css" />
+    <link href="css/style.css" rel="stylesheet" type="text/css" />
+    <link href="css/gallery.css" rel="stylesheet" type="text/css" />
+
+    <!-- Script -->
+    <script src="js/lightbox-plus-jquery.min.js"></script>
   </head>
 
   <body>
     <!-- Header -->
     <header class="d-flex justify-content-center align-items-top"></header>
 
-    <!-- Navigation-->
-    <nav
-      class="font-karla navbar navbar-expand-md navbar-dark bg-dark-transparent sticky-top"
-    >
-      <div class="container-fluid mx-3">
-        <!-- Nav Links -->
-        <div
-          class="offcanvas offcanvas-start"
-          tabindex="-1"
-          id="offcanvasNavbar"
-          aria-labelledby="offcanvasNavbarLabel"
-        >
-          <div class="offcanvas-header mt-3 mx-3">
-            <h5 class="offcanvas-title text-center" id="offcanvasNavbarLabel">
-              <span class="text-primary">Segovia</span>
-              Metal Works
-            </h5>
-            <button
-              type="button"
-              class="btn-close text-reset"
-              data-bs-dismiss="offcanvas"
-              aria-label="Close"
-            ></button>
-          </div>
-          <div class="offcanvas-body mx-3">
-            <ul class="navbar-nav pe-3">
-              <li class="nav-item mx-2">
-                <a class="nav-link" aria-current="page" href="/index.html">
-                  <span class="nav-indicator me-1">
-                    <i class="fa-solid fa-minus fa-xs"></i
-                  ></span>
-                  Home</a
-                >
-              </li>
-              <li class="nav-item mx-2">
-                <a class="nav-link" href="/shop.html"
-                  ><span class="nav-indicator me-1">
-                    <i class="fa-solid fa-minus fa-xs"></i></span
-                  >Shop</a
-                >
-              </li>
-              <li class="nav-item mx-2">
-                <a class="nav-link active" href="/gallery.html"
-                  ><span class="nav-indicator me-1">
-                    <i class="fa-solid fa-minus fa-xs"></i></span
-                  >Gallery</a
-                >
-              </li>
-            </ul>
-          </div>
-        </div>
-
-        <!-- Nav button -->
-        <button
-          class="d-md-none navbar-toggler border-0 shadow-none py-0 flex-grow-1"
-          type="button"
-          data-bs-toggle="offcanvas"
-          data-bs-target="#offcanvasNavbar"
-          aria-controls="offcanvasNavbar"
-          aria-expanded="false"
-          aria-label="Toggle navigation"
-        >
-          <span class="navbar-toggler-icon"></span>
-        </button>
-
-        <a
-          id="logo"
-          class="d-flex flex-grow-1 justify-content-end"
-          href="#page-top"
-        >
-          <!-- logo-light -->
-          <img
-            src="public/images/logo-light.png"
-            alt="Segovia Metal Works"
-            style="width: 30px"
-          />
-        </a>
-
-        <!-- Icons -->
-        <div class="icons d-flex flex-grow-1 justify-content-end">
-          <a
-            href="https://www.facebook.com/segoviametalworks/?ref=page_internal"
-            target="_blank"
-          >
-            <i class="fab fa-facebook-f text-white mx-1 mx-sm-3"></i>
-          </a>
-          <a
-            href="https://api.whatsapp.com/send?phone=19566477174&app=facebook&entry_point=page_cta"
-            target="_blank"
-          >
-            <i class="fab fa-whatsapp text-white mx-1 mx-sm-3"></i>
-          </a>
-          <a href="#" target="_blank">
-            <i class="fa fa-search text-white mx-1 mx-sm-3"></i>
-          </a>
-        </div>
-      </div>
-    </nav>
-
     <main>
-      <section class="py-5 text-center container">
+      <!-- Normal Navigation-->
+      <nav
+        class="font-karla navbar navbar-expand-md navbar-dark bg-dark-transparent sticky-top"
+      >
+        <div class="container-fluid mx-3">
+          <!-- Nav Links -->
+          <div
+            class="offcanvas offcanvas-start"
+            tabindex="-1"
+            id="offcanvasNavbar"
+            aria-labelledby="offcanvasNavbarLabel"
+          >
+            <div class="offcanvas-header mt-3 mx-3">
+              <h5 class="offcanvas-title text-center" id="offcanvasNavbarLabel">
+                <span class="text-primary">Segovia</span>
+                Metal Works
+              </h5>
+              <button
+                type="button"
+                class="btn-close text-reset"
+                data-bs-dismiss="offcanvas"
+                aria-label="Close"
+              ></button>
+            </div>
+            <div class="offcanvas-body mx-3">
+              <ul class="navbar-nav pe-3">
+                <li class="nav-item mx-2">
+                  <a class="nav-link" aria-current="page" href="/index.html">
+                    <span class="nav-indicator me-1">
+                      <i class="fa-solid fa-minus fa-xs"></i
+                    ></span>
+                    Home</a
+                  >
+                </li>
+                <li class="nav-item mx-2">
+                  <a class="nav-link" href="/shop.html"
+                    ><span class="nav-indicator me-1">
+                      <i class="fa-solid fa-minus fa-xs"></i></span
+                    >Shop</a
+                  >
+                </li>
+                <li class="nav-item mx-2">
+                  <a class="nav-link pb-0 active" href="/gallery.html"
+                    ><span class="nav-indicator me-1">
+                      <i class="fa-solid fa-minus fa-xs"></i></span
+                    >Gallery</a
+                  >
+                  <!-- Gallery Links -->
+                  <div id="navbar-gallery-links" class="flex-column ms-4">
+                    <a class="navbar-gallery-link" href="#barbecue-pits"
+                      >Barbecue Pits</a
+                    >
+                    <a class="navbar-gallery-link" href="#log-racks"
+                      >Log Racks</a
+                    >
+                    <a class="navbar-gallery-link" href="#benches">Benches</a>
+                    <a class="navbar-gallery-link" href="#tables">Tables</a>
+                    <a class="navbar-gallery-link" href="#fire-pits"
+                      >Fire Pits</a
+                    >
+                    <a class="navbar-gallery-link" href="#gates">Gates</a>
+                    <a class="navbar-gallery-link" href="#customs">Customs</a>
+                  </div>
+                </li>
+              </ul>
+            </div>
+          </div>
+
+          <!-- Nav button -->
+          <button
+            class="d-md-none navbar-toggler border-0 shadow-none py-0 flex-grow-1"
+            type="button"
+            data-bs-toggle="offcanvas"
+            data-bs-target="#offcanvasNavbar"
+            aria-controls="offcanvasNavbar"
+            aria-expanded="false"
+            aria-label="Toggle navigation"
+          >
+            <span class="navbar-toggler-icon"></span>
+          </button>
+
+          <a
+            id="logo"
+            class="d-flex flex-grow-1 justify-content-end"
+            href="#page-top"
+          >
+            <!-- logo-light -->
+            <img
+              src="public/images/logo-light.png"
+              alt="Segovia Metal Works"
+              style="width: 30px"
+            />
+          </a>
+
+          <!-- Icons -->
+          <div class="icons d-flex flex-grow-1 justify-content-end">
+            <a
+              href="https://www.facebook.com/segoviametalworks/?ref=page_internal"
+              target="_blank"
+            >
+              <i class="fab fa-facebook-f text-white mx-1 mx-sm-3"></i>
+            </a>
+            <a
+              href="https://api.whatsapp.com/send?phone=19566477174&app=facebook&entry_point=page_cta"
+              target="_blank"
+            >
+              <i class="fab fa-whatsapp text-white mx-1 mx-sm-3"></i>
+            </a>
+          </div>
+        </div>
+      </nav>
+
+      <!-- Info Header -->
+      <section class="pt-1 pb-5 text-center container">
         <div class="row py-lg-5">
+          <nav aria-label="breadcrumb">
+            <ol class="breadcrumb my-4 mx-3">
+              <li class="breadcrumb-item"><a href="index.html">Home</a></li>
+              <li class="breadcrumb-item active" aria-current="page">
+                Gallery
+              </li>
+            </ol>
+          </nav>
           <div class="col-lg-6 col-md-8 mx-auto">
-            <h1 class="font-weight-light">Album example</h1>
+            <h1>Gallery Of Our Work</h1>
             <p class="lead text-muted">
-              Something short and leading about the collection below—its
-              contents, the creator, etc. Make it short and sweet, but not too
-              short so folks don’t simply skip over it entirely.
+              Every one of our products are individually inspected making sure
+              the work you receive is quality work. We work on barbecue pits,
+              firepits, trailers, log racks, benches, tables, trailer pits,
+              custom logos/names and many other barbecuing accessories.
             </p>
             <p>
-              <a href="#" class="btn btn-primary my-2">Main call to action</a>
-              <a href="#" class="btn btn-secondary my-2">Secondary action</a>
+              <a
+                href="shop.html"
+                class="cool-button font-karla text-primary btn btn-primary my-2 px-4"
+                >Browse Our Shop</a
+              >
+              <a
+                href="index.html#contact"
+                class="cool-button-secondary font-karla text-secondary btn btn-secondary my-2 px-5"
+                >Contact Us</a
+              >
             </p>
           </div>
         </div>
       </section>
 
-      <div class="album py-5 bg-light">
+      <!-- Gallery Navbar -->
+      <div
+        id="gallery-nav"
+        class="d-flex font-karla fw-bold justify-content-around bg-white text-primary py-2 sticky-top"
+      >
+        <a href="#barbecue-pits">Barbecue Pits</a>
+        <a href="#log-racks">Log Racks</a>
+        <a href="#benches">Benches</a>
+        <a href="#tables">Tables</a>
+        <a href="#fire-pits">Fire Pits</a>
+        <a href="#gates">Gates</a>
+        <a href="#customs">Customs</a>
+      </div>
+
+      <!-- Gallery -->
+      <div class="py-5 px-4 bg-dark">
         <div class="container">
-          <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-3">
+          <!-- Barbecue Pits -->
+          <h1 id="barbecue-pits" class="font-karla text-white">
+            Barbecue Pits
+          </h1>
+          <div class="row row-cols-2 row-cols-md-3 g-3 mb-3 g-md-4 mb-md-4">
             <div class="col">
               <div class="card shadow-sm">
-                <svg
-                  class="bd-placeholder-img card-img-top"
-                  width="100%"
-                  height="225"
-                  xmlns="http://www.w3.org/2000/svg"
-                  aria-label="Placeholder: Thumbnail"
-                  preserveAspectRatio="xMidYMid slice"
-                  role="img"
-                  focusable="false"
+                <a
+                  href="public/images/gallery/bbq-1.jpg"
+                  data-lightbox="barbecue-pits"
                 >
-                  <title>Placeholder</title>
-                  <rect width="100%" height="100%" fill="#55595c" />
-                  <text x="50%" y="50%" fill="#eceeef" dy=".3em">
-                    Thumbnail
-                  </text>
-                </svg>
-
-                <div class="card-body">
-                  <p class="card-text">
-                    This is a wider card with supporting text below as a natural
-                    lead-in to additional content. This content is a little bit
-                    longer.
-                  </p>
-                  <div
-                    class="d-flex justify-content-between align-items-center"
-                  >
-                    <div class="btn-group">
-                      <button
-                        type="button"
-                        class="btn btn-sm btn-outline-secondary"
-                      >
-                        View
-                      </button>
-                      <button
-                        type="button"
-                        class="btn btn-sm btn-outline-secondary"
-                      >
-                        Edit
-                      </button>
-                    </div>
-                    <small class="text-muted">9 mins</small>
-                  </div>
-                </div>
+                  <img
+                    loading="lazy"
+                    class="card-img-top card-img"
+                    src="public/images/gallery/bbq-1-small.jpg"
+                    alt=""
+                  />
+                </a>
               </div>
             </div>
             <div class="col">
               <div class="card shadow-sm">
-                <svg
-                  class="bd-placeholder-img card-img-top"
-                  width="100%"
-                  height="225"
-                  xmlns="http://www.w3.org/2000/svg"
-                  aria-label="Placeholder: Thumbnail"
-                  preserveAspectRatio="xMidYMid slice"
-                  role="img"
-                  focusable="false"
+                <a
+                  href="public/images/gallery/bbq-2.jpg"
+                  data-lightbox="barbecue-pits"
                 >
-                  <title>Placeholder</title>
-                  <rect width="100%" height="100%" fill="#55595c" />
-                  <text x="50%" y="50%" fill="#eceeef" dy=".3em">
-                    Thumbnail
-                  </text>
-                </svg>
-
-                <div class="card-body">
-                  <p class="card-text">
-                    This is a wider card with supporting text below as a natural
-                    lead-in to additional content. This content is a little bit
-                    longer.
-                  </p>
-                  <div
-                    class="d-flex justify-content-between align-items-center"
-                  >
-                    <div class="btn-group">
-                      <button
-                        type="button"
-                        class="btn btn-sm btn-outline-secondary"
-                      >
-                        View
-                      </button>
-                      <button
-                        type="button"
-                        class="btn btn-sm btn-outline-secondary"
-                      >
-                        Edit
-                      </button>
-                    </div>
-                    <small class="text-muted">9 mins</small>
-                  </div>
-                </div>
+                  <img
+                    loading="lazy"
+                    class="card-img-top card-img"
+                    src="public/images/gallery/bbq-2-small.jpg"
+                    alt=""
+                  />
+                </a>
               </div>
             </div>
             <div class="col">
               <div class="card shadow-sm">
-                <svg
-                  class="bd-placeholder-img card-img-top"
-                  width="100%"
-                  height="225"
-                  xmlns="http://www.w3.org/2000/svg"
-                  aria-label="Placeholder: Thumbnail"
-                  preserveAspectRatio="xMidYMid slice"
-                  role="img"
-                  focusable="false"
+                <a
+                  href="public/images/gallery/bbq-3.jpg"
+                  data-lightbox="barbecue-pits"
                 >
-                  <title>Placeholder</title>
-                  <rect width="100%" height="100%" fill="#55595c" />
-                  <text x="50%" y="50%" fill="#eceeef" dy=".3em">
-                    Thumbnail
-                  </text>
-                </svg>
-
-                <div class="card-body">
-                  <p class="card-text">
-                    This is a wider card with supporting text below as a natural
-                    lead-in to additional content. This content is a little bit
-                    longer.
-                  </p>
-                  <div
-                    class="d-flex justify-content-between align-items-center"
-                  >
-                    <div class="btn-group">
-                      <button
-                        type="button"
-                        class="btn btn-sm btn-outline-secondary"
-                      >
-                        View
-                      </button>
-                      <button
-                        type="button"
-                        class="btn btn-sm btn-outline-secondary"
-                      >
-                        Edit
-                      </button>
-                    </div>
-                    <small class="text-muted">9 mins</small>
-                  </div>
-                </div>
-              </div>
-            </div>
-
-            <div class="col">
-              <div class="card shadow-sm">
-                <svg
-                  class="bd-placeholder-img card-img-top"
-                  width="100%"
-                  height="225"
-                  xmlns="http://www.w3.org/2000/svg"
-                  aria-label="Placeholder: Thumbnail"
-                  preserveAspectRatio="xMidYMid slice"
-                  role="img"
-                  focusable="false"
-                >
-                  <title>Placeholder</title>
-                  <rect width="100%" height="100%" fill="#55595c" />
-                  <text x="50%" y="50%" fill="#eceeef" dy=".3em">
-                    Thumbnail
-                  </text>
-                </svg>
-
-                <div class="card-body">
-                  <p class="card-text">
-                    This is a wider card with supporting text below as a natural
-                    lead-in to additional content. This content is a little bit
-                    longer.
-                  </p>
-                  <div
-                    class="d-flex justify-content-between align-items-center"
-                  >
-                    <div class="btn-group">
-                      <button
-                        type="button"
-                        class="btn btn-sm btn-outline-secondary"
-                      >
-                        View
-                      </button>
-                      <button
-                        type="button"
-                        class="btn btn-sm btn-outline-secondary"
-                      >
-                        Edit
-                      </button>
-                    </div>
-                    <small class="text-muted">9 mins</small>
-                  </div>
-                </div>
+                  <img
+                    loading="lazy"
+                    class="card-img-top img-fluid"
+                    src="public/images/gallery/bbq-3-small.jpg"
+                    alt=""
+                  />
+                </a>
               </div>
             </div>
             <div class="col">
               <div class="card shadow-sm">
-                <svg
-                  class="bd-placeholder-img card-img-top"
-                  width="100%"
-                  height="225"
-                  xmlns="http://www.w3.org/2000/svg"
-                  aria-label="Placeholder: Thumbnail"
-                  preserveAspectRatio="xMidYMid slice"
-                  role="img"
-                  focusable="false"
+                <a
+                  href="public/images/gallery/bbq-4.jpg"
+                  data-lightbox="barbecue-pits"
                 >
-                  <title>Placeholder</title>
-                  <rect width="100%" height="100%" fill="#55595c" />
-                  <text x="50%" y="50%" fill="#eceeef" dy=".3em">
-                    Thumbnail
-                  </text>
-                </svg>
-
-                <div class="card-body">
-                  <p class="card-text">
-                    This is a wider card with supporting text below as a natural
-                    lead-in to additional content. This content is a little bit
-                    longer.
-                  </p>
-                  <div
-                    class="d-flex justify-content-between align-items-center"
-                  >
-                    <div class="btn-group">
-                      <button
-                        type="button"
-                        class="btn btn-sm btn-outline-secondary"
-                      >
-                        View
-                      </button>
-                      <button
-                        type="button"
-                        class="btn btn-sm btn-outline-secondary"
-                      >
-                        Edit
-                      </button>
-                    </div>
-                    <small class="text-muted">9 mins</small>
-                  </div>
-                </div>
+                  <img
+                    loading="lazy"
+                    class="card-img-top img-fluid"
+                    src="public/images/gallery/bbq-4-small.jpg"
+                    alt=""
+                  />
+                </a>
               </div>
             </div>
             <div class="col">
               <div class="card shadow-sm">
-                <svg
-                  class="bd-placeholder-img card-img-top"
-                  width="100%"
-                  height="225"
-                  xmlns="http://www.w3.org/2000/svg"
-                  aria-label="Placeholder: Thumbnail"
-                  preserveAspectRatio="xMidYMid slice"
-                  role="img"
-                  focusable="false"
+                <a
+                  href="public/images/gallery/bbq-5.jpg"
+                  data-lightbox="barbecue-pits"
                 >
-                  <title>Placeholder</title>
-                  <rect width="100%" height="100%" fill="#55595c" />
-                  <text x="50%" y="50%" fill="#eceeef" dy=".3em">
-                    Thumbnail
-                  </text>
-                </svg>
+                  <img
+                    loading="lazy"
+                    class="card-img-top img-fluid"
+                    src="public/images/gallery/bbq-5-small.jpg"
+                    alt=""
+                  />
+                </a>
+              </div>
+            </div>
+            <div class="col">
+              <div class="card shadow-sm">
+                <a
+                  href="public/images/gallery/bbq-6.jpg"
+                  data-lightbox="barbecue-pits"
+                >
+                  <img
+                    loading="lazy"
+                    class="card-img-top img-fluid"
+                    src="public/images/gallery/bbq-6-small.jpg"
+                    alt=""
+                  />
+                </a>
+              </div>
+            </div>
+            <div class="col">
+              <div class="card shadow-sm">
+                <a
+                  href="public/images/gallery/bbq-7.jpg"
+                  data-lightbox="barbecue-pits"
+                >
+                  <img
+                    loading="lazy"
+                    class="card-img-top img-fluid"
+                    src="public/images/gallery/bbq-7-small.jpg"
+                    alt=""
+                  />
+                </a>
+              </div>
+            </div>
+          </div>
 
-                <div class="card-body">
-                  <p class="card-text">
-                    This is a wider card with supporting text below as a natural
-                    lead-in to additional content. This content is a little bit
-                    longer.
-                  </p>
-                  <div
-                    class="d-flex justify-content-between align-items-center"
-                  >
-                    <div class="btn-group">
-                      <button
-                        type="button"
-                        class="btn btn-sm btn-outline-secondary"
-                      >
-                        View
-                      </button>
-                      <button
-                        type="button"
-                        class="btn btn-sm btn-outline-secondary"
-                      >
-                        Edit
-                      </button>
-                    </div>
-                    <small class="text-muted">9 mins</small>
-                  </div>
-                </div>
+          <!-- Log Racks -->
+          <h1 id="log-racks" class="font-karla text-white">Log Racks</h1>
+          <div class="row row-cols-2 row-cols-md-3 g-3 mb-3 g-md-4 mb-md-4">
+            <div class="col">
+              <div class="card shadow-sm">
+                <a
+                  href="public/images/gallery/log-rack-1.jpg"
+                  data-lightbox="log-racks"
+                >
+                  <img
+                    loading="lazy"
+                    class="card-img-top card-img"
+                    src="public/images/gallery/log-rack-1-small.jpg"
+                    alt=""
+                  />
+                </a>
+              </div>
+            </div>
+            <div class="col">
+              <div class="card shadow-sm">
+                <a
+                  href="public/images/gallery/log-rack-2.jpg"
+                  data-lightbox="log-racks"
+                >
+                  <img
+                    loading="lazy"
+                    class="card-img-top card-img"
+                    src="public/images/gallery/log-rack-2-small.jpg"
+                    alt=""
+                  />
+                </a>
+              </div>
+            </div>
+            <div class="col">
+              <div class="card shadow-sm">
+                <a
+                  href="public/images/gallery/log-rack-3.jpg"
+                  data-lightbox="log-racks"
+                >
+                  <img
+                    loading="lazy"
+                    class="card-img-top img-fluid"
+                    src="public/images/gallery/log-rack-3-small.jpg"
+                    alt=""
+                  />
+                </a>
+              </div>
+            </div>
+            <div class="col">
+              <div class="card shadow-sm">
+                <a
+                  href="public/images/gallery/log-rack-4.jpg"
+                  data-lightbox="log-racks"
+                >
+                  <img
+                    loading="lazy"
+                    class="card-img-top img-fluid"
+                    src="public/images/gallery/log-rack-4-small.jpg"
+                    alt=""
+                  />
+                </a>
               </div>
             </div>
 
             <div class="col">
               <div class="card shadow-sm">
-                <svg
-                  class="bd-placeholder-img card-img-top"
-                  width="100%"
-                  height="225"
-                  xmlns="http://www.w3.org/2000/svg"
-                  aria-label="Placeholder: Thumbnail"
-                  preserveAspectRatio="xMidYMid slice"
-                  role="img"
-                  focusable="false"
+                <a
+                  href="public/images/gallery/log-rack-5.jpg"
+                  data-lightbox="log-racks"
                 >
-                  <title>Placeholder</title>
-                  <rect width="100%" height="100%" fill="#55595c" />
-                  <text x="50%" y="50%" fill="#eceeef" dy=".3em">
-                    Thumbnail
-                  </text>
-                </svg>
-
-                <div class="card-body">
-                  <p class="card-text">
-                    This is a wider card with supporting text below as a natural
-                    lead-in to additional content. This content is a little bit
-                    longer.
-                  </p>
-                  <div
-                    class="d-flex justify-content-between align-items-center"
-                  >
-                    <div class="btn-group">
-                      <button
-                        type="button"
-                        class="btn btn-sm btn-outline-secondary"
-                      >
-                        View
-                      </button>
-                      <button
-                        type="button"
-                        class="btn btn-sm btn-outline-secondary"
-                      >
-                        Edit
-                      </button>
-                    </div>
-                    <small class="text-muted">9 mins</small>
-                  </div>
-                </div>
+                  <img
+                    loading="lazy"
+                    class="card-img-top img-fluid"
+                    src="public/images/gallery/log-rack-5.jpg"
+                    alt=""
+                  />
+                </a>
               </div>
             </div>
             <div class="col">
               <div class="card shadow-sm">
-                <svg
-                  class="bd-placeholder-img card-img-top"
-                  width="100%"
-                  height="225"
-                  xmlns="http://www.w3.org/2000/svg"
-                  aria-label="Placeholder: Thumbnail"
-                  preserveAspectRatio="xMidYMid slice"
-                  role="img"
-                  focusable="false"
+                <a
+                  href="public/images/gallery/log-rack-6.jpg"
+                  data-lightbox="log-racks"
                 >
-                  <title>Placeholder</title>
-                  <rect width="100%" height="100%" fill="#55595c" />
-                  <text x="50%" y="50%" fill="#eceeef" dy=".3em">
-                    Thumbnail
-                  </text>
-                </svg>
-
-                <div class="card-body">
-                  <p class="card-text">
-                    This is a wider card with supporting text below as a natural
-                    lead-in to additional content. This content is a little bit
-                    longer.
-                  </p>
-                  <div
-                    class="d-flex justify-content-between align-items-center"
-                  >
-                    <div class="btn-group">
-                      <button
-                        type="button"
-                        class="btn btn-sm btn-outline-secondary"
-                      >
-                        View
-                      </button>
-                      <button
-                        type="button"
-                        class="btn btn-sm btn-outline-secondary"
-                      >
-                        Edit
-                      </button>
-                    </div>
-                    <small class="text-muted">9 mins</small>
-                  </div>
-                </div>
+                  <img
+                    loading="lazy"
+                    class="card-img-top img-fluid"
+                    src="public/images/gallery/log-rack-6-small.jpg"
+                    alt=""
+                  />
+                </a>
               </div>
             </div>
             <div class="col">
               <div class="card shadow-sm">
-                <svg
-                  class="bd-placeholder-img card-img-top"
-                  width="100%"
-                  height="225"
-                  xmlns="http://www.w3.org/2000/svg"
-                  aria-label="Placeholder: Thumbnail"
-                  preserveAspectRatio="xMidYMid slice"
-                  role="img"
-                  focusable="false"
+                <a
+                  href="public/images/gallery/log-rack-7.jpg"
+                  data-lightbox="log-racks"
                 >
-                  <title>Placeholder</title>
-                  <rect width="100%" height="100%" fill="#55595c" />
-                  <text x="50%" y="50%" fill="#eceeef" dy=".3em">
-                    Thumbnail
-                  </text>
-                </svg>
+                  <img
+                    loading="lazy"
+                    class="card-img-top img-fluid"
+                    src="public/images/gallery/log-rack-7-small.jpg"
+                    alt=""
+                  />
+                </a>
+              </div>
+            </div>
+            <div class="col">
+              <div class="card shadow-sm">
+                <a
+                  href="public/images/gallery/log-rack-8.jpg"
+                  data-lightbox="log-racks"
+                >
+                  <img
+                    loading="lazy"
+                    class="card-img-top img-fluid"
+                    src="public/images/gallery/log-rack-8-small.jpg"
+                    alt=""
+                  />
+                </a>
+              </div>
+            </div>
+          </div>
 
-                <div class="card-body">
-                  <p class="card-text">
-                    This is a wider card with supporting text below as a natural
-                    lead-in to additional content. This content is a little bit
-                    longer.
-                  </p>
-                  <div
-                    class="d-flex justify-content-between align-items-center"
-                  >
-                    <div class="btn-group">
-                      <button
-                        type="button"
-                        class="btn btn-sm btn-outline-secondary"
-                      >
-                        View
-                      </button>
-                      <button
-                        type="button"
-                        class="btn btn-sm btn-outline-secondary"
-                      >
-                        Edit
-                      </button>
-                    </div>
-                    <small class="text-muted">9 mins</small>
-                  </div>
-                </div>
+          <!-- Benches -->
+          <h1 id="benches" class="font-karla text-white">Benches</h1>
+          <div class="row row-cols-2 row-cols-md-3 g-3 mb-3 g-md-4 mb-md-4">
+            <div class="col">
+              <div class="card shadow-sm">
+                <a
+                  href="public/images/gallery/bench-1.jpg"
+                  data-lightbox="benches"
+                >
+                  <img
+                    loading="lazy"
+                    class="card-img-top img-fluid"
+                    src="public/images/gallery/bench-1-small.jpg"
+                    alt=""
+                  />
+                </a>
+              </div>
+            </div>
+            <div class="col">
+              <div class="card shadow-sm">
+                <a
+                  href="https://scontent-hou1-1.xx.fbcdn.net/v/t1.6435-9/163563315_302682577943609_7345340103400680875_n.jpg?_nc_cat=104&ccb=1-7&_nc_sid=8bfeb9&_nc_ohc=YKSlHaLohn8AX9o3xN8&_nc_ht=scontent-hou1-1.xx&oh=00_AT-2LXjKVuxYSW1o_HZ2RGB91Hdy3HhvhVjJIOGt2nziZA&oe=62B77650"
+                  data-lightbox="benches"
+                >
+                  <img
+                    loading="lazy"
+                    class="card-img-top img-fluid"
+                    src="public/images/gallery/bench-2-small.jpg"
+                    alt=""
+                  />
+                </a>
+              </div>
+            </div>
+            <div class="col">
+              <div class="card shadow-sm">
+                <a
+                  href="https://scontent-hou1-1.xx.fbcdn.net/v/t1.6435-9/203744763_362132425331957_792267758472676445_n.jpg?_nc_cat=107&ccb=1-7&_nc_sid=8bfeb9&_nc_ohc=PwLJpaO_TgAAX-Dg08h&_nc_ht=scontent-hou1-1.xx&oh=00_AT_6b7-LNQTdbsT5JUQIoOdBHI7GKp3rrCFAgxZJcsjXFw&oe=62B9F9ED"
+                  data-lightbox="benches"
+                >
+                  <img
+                    loading="lazy"
+                    class="card-img-top img-fluid"
+                    src="public/images/gallery/bench-3-small.jpg"
+                    alt=""
+                  />
+                </a>
+              </div>
+            </div>
+            <div class="col">
+              <div class="card shadow-sm">
+                <a
+                  href="https://scontent-hou1-1.xx.fbcdn.net/v/t1.6435-9/166666512_305115851033615_7135280487248983291_n.jpg?_nc_cat=109&ccb=1-7&_nc_sid=8bfeb9&_nc_ohc=C5RS8l4fkNUAX-thRrk&_nc_ht=scontent-hou1-1.xx&oh=00_AT8hNbyMhMPVmEfG8BXaM7d2OllqZERlIGCc9g3zXd08rw&oe=62B6B349"
+                  data-lightbox="benches"
+                >
+                  <img
+                    loading="lazy"
+                    class="card-img-top img-fluid"
+                    src="public/images/gallery/bench-4-small.jpg"
+                    alt=""
+                  />
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Tables -->
+          <h1 id="tables" class="font-karla text-white">Tables</h1>
+          <div class="row row-cols-2 row-cols-md-3 g-3 mb-3 g-md-4 mb-md-4">
+            <div class="col">
+              <div class="card shadow-sm">
+                <a
+                  href="public/images/gallery/table-1.jpg"
+                  data-lightbox="tables"
+                >
+                  <img
+                    loading="lazy"
+                    class="card-img-top img-fluid"
+                    src="public/images/gallery/table-1-small.jpg"
+                    alt=""
+                  />
+                </a>
+              </div>
+            </div>
+            <div class="col">
+              <div class="card shadow-sm">
+                <a
+                  href="public/images/gallery/table-2.jpg"
+                  data-lightbox="tables"
+                >
+                  <img
+                    loading="lazy"
+                    class="card-img-top img-fluid"
+                    src="public/images/gallery/table-2-small.jpg"
+                    alt=""
+                  />
+                </a>
+              </div>
+            </div>
+            <div class="col">
+              <div class="card shadow-sm">
+                <a
+                  href="public/images/gallery/table-3.jpg"
+                  data-lightbox="tables"
+                >
+                  <img
+                    loading="lazy"
+                    class="card-img-top img-fluid"
+                    src="public/images/gallery/table-3.jpg"
+                    alt=""
+                  />
+                </a>
+              </div>
+            </div>
+            <div class="col">
+              <div class="card shadow-sm">
+                <a
+                  href="public/images/gallery/table-4.jpg"
+                  data-lightbox="tables"
+                >
+                  <img
+                    loading="lazy"
+                    class="card-img-top img-fluid"
+                    src="public/images/gallery/table-4-small.jpg"
+                    alt=""
+                  />
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Fire Pits -->
+          <h1 id="fire-pits" class="font-karla text-white">Fire Pits</h1>
+          <div class="row row-cols-2 row-cols-md-3 g-3 mb-3 g-md-4 mb-md-4">
+            <div class="col">
+              <div class="card shadow-sm">
+                <a
+                  href="public/images/gallery/fire-pit-1.jpg"
+                  data-lightbox="fire-pits"
+                >
+                  <img
+                    loading="lazy"
+                    class="card-img-top img-fluid"
+                    src="public/images/gallery/fire-pit-1-small.jpg"
+                    alt=""
+                  />
+                </a>
+              </div>
+            </div>
+            <div class="col">
+              <div class="card shadow-sm">
+                <a
+                  href="public/images/gallery/fire-pit-2.jpg"
+                  data-lightbox="fire-pits"
+                >
+                  <img
+                    loading="lazy"
+                    class="card-img-top img-fluid"
+                    src="public/images/gallery/fire-pit-2-small.jpg"
+                    alt=""
+                  />
+                </a>
+              </div>
+            </div>
+            <div class="col">
+              <div class="card shadow-sm">
+                <a
+                  href="public/images/gallery/fire-pit-3.jpg"
+                  data-lightbox="fire-pits"
+                >
+                  <img
+                    loading="lazy"
+                    class="card-img-top img-fluid"
+                    src="public/images/gallery/fire-pit-3-small.jpg"
+                    alt=""
+                  />
+                </a>
+              </div>
+            </div>
+            <div class="col">
+              <div class="card shadow-sm">
+                <a
+                  href="public/images/gallery/fire-pit-4.jpg"
+                  data-lightbox="fire-pits"
+                >
+                  <img
+                    loading="lazy"
+                    class="card-img-top img-fluid"
+                    src="public/images/gallery/fire-pit-4.jpg"
+                    alt=""
+                  />
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Gates -->
+          <h1 id="gates" class="font-karla text-white">Gates</h1>
+          <div class="row row-cols-2 row-cols-md-3 g-3 mb-3 g-md-4 mb-md-4">
+            <div class="col">
+              <div class="card shadow-sm">
+                <a
+                  href="public/images/gallery/gate-1.jpg"
+                  data-lightbox="gates"
+                >
+                  <img
+                    loading="lazy"
+                    class="card-img-top img-fluid"
+                    src="public/images/gallery/gate-1-small.jpg"
+                    alt=""
+                  />
+                </a>
+              </div>
+            </div>
+            <div class="col">
+              <div class="card shadow-sm">
+                <a
+                  href="public/images/gallery/gate-2.jpg"
+                  data-lightbox="gates"
+                >
+                  <img
+                    loading="lazy"
+                    class="card-img-top img-fluid"
+                    src="public/images/gallery/gate-2-small.jpg"
+                    alt=""
+                  />
+                </a>
+              </div>
+            </div>
+            <div class="col">
+              <div class="card shadow-sm">
+                <a
+                  href="public/images/gallery/gate-3.jpg"
+                  data-lightbox="gates"
+                >
+                  <img
+                    loading="lazy"
+                    class="card-img-top img-fluid"
+                    src="public/images/gallery/gate-3-small.jpg"
+                    alt=""
+                  />
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Customs -->
+          <h1 id="customs" class="font-karla text-white">Customs</h1>
+          <div class="row row-cols-2 row-cols-md-3 g-3 mb-3 g-md-4 mb-md-4">
+            <div class="col">
+              <div class="card shadow-sm">
+                <a
+                  href="public/images/gallery/custom-1.jpg"
+                  data-lightbox="customs"
+                >
+                  <img
+                    loading="lazy"
+                    class="card-img-top img-fluid"
+                    src="public/images/gallery/custom-1.jpg"
+                    alt=""
+                  />
+                </a>
+              </div>
+            </div>
+            <div class="col">
+              <div class="card shadow-sm">
+                <a
+                  href="public/images/gallery/custom-2.jpg"
+                  data-lightbox="customs"
+                >
+                  <img
+                    loading="lazy"
+                    class="card-img-top img-fluid"
+                    src="public/images/gallery/custom-2-small.jpg"
+                    alt=""
+                  />
+                </a>
+              </div>
+            </div>
+            <div class="col">
+              <div class="card shadow-sm">
+                <a
+                  href="public/images/gallery/custom-3.jpg"
+                  data-lightbox="customs"
+                >
+                  <img
+                    loading="lazy"
+                    class="card-img-top img-fluid"
+                    src="public/images/gallery/custom-3-small.jpg"
+                    alt=""
+                  />
+                </a>
+              </div>
+            </div>
+            <div class="col">
+              <div class="card shadow-sm">
+                <a
+                  href="public/images/gallery/custom-4.jpg"
+                  data-lightbox="customs"
+                >
+                  <img
+                    loading="lazy"
+                    class="card-img-top img-fluid"
+                    src="public/images/gallery/custom-4-small.jpg"
+                    alt=""
+                  />
+                </a>
               </div>
             </div>
           </div>
@@ -594,72 +765,67 @@
             <p class="footer-center mb-1">Sunday: Closed</p>
           </div>
 
-          <!-- Location -->
-          <div class="col-12 col-md mb-4 d-flex flex-column">
-            <h5 class="footer-center font-karla mb-2">Location</h5>
-            <p class="footer-center mb-1">5701 troy ave. Weslaco, TX 78596</p>
-
-            <iframe
-              class="my-2 mx-auto mx-md-0"
-              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d894.8716708152907!2d-98.01144037871072!3d26.21337153366539!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x86659d9a2a2b6cef%3A0x8d8c49fd3ee24c5e!2s5701%20Troy%20Ave%2C%20Weslaco%2C%20TX%2078599!5e0!3m2!1sen!2sus!4v1652391722329!5m2!1sen!2sus"
-              width="250"
-              height="200"
-              style="border: 0"
-              allowfullscreen=""
-              loading="lazy"
-              referrerpolicy="no-referrer-when-downgrade"
-            ></iframe>
-          </div>
-
           <!-- Contact -->
-          <div class="col-12 col-md mb-4">
-            <h5 class="footer-center font-karla mb-2">Contact</h5>
-            <!-- Phone -->
-            <p class="footer-center mb-2">
-              <a href="tel:+19566477174">(956) 657-7147</a>
-            </p>
-            <!-- Email -->
-            <p class="footer-center mb-2">
-              <a href="mailto:name@email.com">josedsegovia99@gmail.com</a>
-            </p>
-            <!-- Social Icons -->
-            <ul class="list-inline footer-center">
-              <li class="list-inline-item">
-                <a href=" http://m.me/segoviametalworks" target="_blank"
-                  ><i class="fa-brands fa-2x fa-facebook-messenger"></i
-                ></a>
-              </li>
-              <li class="list-inline-item">
-                <a
-                  target="_blank"
-                  href="https://api.whatsapp.com/send?phone=19566477174&app=facebook&entry_point=page_cta"
-                >
-                  <i class="fab fa-whatsapp fa-2x"></i>
-                </a>
-              </li>
-            </ul>
+          <div class="col-12 col-md mb-4 d-flex flex-column align-items-center">
+            <div>
+              <h5 class="footer-center font-karla mb-2">Contact</h5>
+              <!-- Phone -->
+              <p class="footer-center mb-2">
+                <a href="tel:+19566477174">(956) 657-7147</a>
+              </p>
+              <!-- Email -->
+              <p class="footer-center mb-2">
+                <a href="mailto:name@email.com">josedsegovia99@gmail.com</a>
+              </p>
+              <!-- Social Icons -->
+              <ul class="list-inline footer-center">
+                <li class="list-inline-item">
+                  <a href=" http://m.me/segoviametalworks" target="_blank"
+                    ><i class="fa-brands fa-2x fa-facebook-messenger"></i
+                  ></a>
+                </li>
+                <li class="list-inline-item">
+                  <a
+                    target="_blank"
+                    href="https://api.whatsapp.com/send?phone=19566477174&app=facebook&entry_point=page_cta"
+                  >
+                    <i class="fab fa-whatsapp fa-2x"></i>
+                  </a>
+                </li>
+              </ul>
+            </div>
           </div>
 
-          <!-- Links -->
-          <div class="col-12 col-md mb-4">
-            <h5 class="footer-center font-karla mb-2">Links</h5>
-            <ul class="footer-center ps-0">
-              <li>
-                <a class="mb-1" href="/index.html">Home</a>
-              </li>
-              <li>
-                <a class="mb-1" href="/shop.html">Shop</a>
-              </li>
-              <li>
-                <a class="mb-1" href="/gallery.html">Gallery</a>
-              </li>
-              <li>
-                <!-- back to top -->
-                <a class="mb-1" href="#top">Back to top</a>
-              </li>
-            </ul>
+          <!-- Location -->
+          <div
+            class="small-center-medium-end-align col-12 col-md mb-4 d-flex flex-column"
+          >
+            <div>
+              <h5 class="footer-center font-karla mb-2">Location</h5>
+              <p class="footer-center mb-1">5701 Troy Ave. Weslaco, TX 78596</p>
+              <iframe
+                class="my-2 mx-auto mx-md-0"
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d894.8716708152907!2d-98.01144037871072!3d26.21337153366539!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x86659d9a2a2b6cef%3A0x8d8c49fd3ee24c5e!2s5701%20Troy%20Ave%2C%20Weslaco%2C%20TX%2078599!5e0!3m2!1sen!2sus!4v1652391722329!5m2!1sen!2sus"
+                width="250"
+                height="200"
+                style="border: 0"
+                allowfullscreen=""
+                loading="lazy"
+                referrerpolicy="no-referrer-when-downgrade"
+              ></iframe>
+            </div>
           </div>
         </div>
+
+        <!-- Links -->
+        <div class="d-flex justify-content-around font-karla my-3">
+          <a class="mb-1" href="/index.html">Home</a>
+          <a class="mb-1" href="/shop.html">Shop</a>
+          <a class="mb-1" href="/gallery.html">Gallery</a>
+          <a class="mb-1" href="#top">Back to top</a>
+        </div>
+
+        <hr class="featurette-divider" />
 
         <div class="row d-flex justify-content-between">
           <div class="col-12 col-md-6">
@@ -670,13 +836,15 @@
             </p>
           </div>
           <div class="col-12 col-md-6">
-            <p class="footer-center text-muted">
+            <p
+              class="small-center-medium-end-justify footer-center text-muted d-flex"
+            >
               Designed by
               <a
                 href="https://jpena208.github.io/josepena-website/"
                 target="_blank"
               >
-                Jose Peña
+                &nbsp;Jose Peña
               </a>
             </p>
           </div>
