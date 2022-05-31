@@ -40,6 +40,13 @@ a {
   font-family: "Karla", sans-serif;
 }
 
+.small-bar {
+  padding: 0;
+  width: 50px;
+  height: 3px;
+  display: block;
+}
+
 /* Navbar
 -------------------------------------------------- */
 nav a {
@@ -371,7 +378,7 @@ figcaption a {
 
   /* Reviews */
   #review-carousel {
-    height: 140vw;
+    height: 150vw;
   }
 
   /* Contact */
