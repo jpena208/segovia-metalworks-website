@@ -20,6 +20,12 @@
   bottom: auto;
 }
 
+.bottom-card-overlay {
+  bottom: 32%;
+  top: auto;
+  left: auto;
+}
+
 /* Shop Logo */
 #shop-logo {
   width: 200px;

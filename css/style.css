@@ -301,6 +301,21 @@ figcaption a {
   color: var(--bs-white) !important;
 }
 
+.cool-button-group {
+  border: 0;
+  background: linear-gradient(
+    to left,
+    rgba(255, 255, 255, 0) 50%,
+    var(--bs-primary) 50%
+  );
+  background-size: 200% 100%;
+  background-position: right bottom;
+  transition: all 0.4s ease;
+}
+.cool-button-group:hover {
+  background-position: left bottom;
+  color: var(--bs-white) !important;
+}
 #contact-box {
   width: 69%;
 }
